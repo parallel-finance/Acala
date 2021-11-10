@@ -45,6 +45,8 @@ members = [
 	"ecosystem-modules/stable-asset/lib/stable-asset",
 ]
 
+resolver = "2"
+
 [profile.dev]
 split-debuginfo = "unpacked"
 
