@@ -1,5 +1,3 @@
-cargo-features = ["resolver"]
-
 [workspace]
 members = [
 	"node",
@@ -46,8 +44,6 @@ members = [
 	"ecosystem-modules/compound-cash",
 	"ecosystem-modules/stable-asset/lib/stable-asset",
 ]
-
-resolver = "2"
 
 [profile.dev]
 split-debuginfo = "unpacked"
