@@ -744,6 +744,7 @@ parameter_type_with_key! {
 				TokenSymbol::LKSM |
 				TokenSymbol::RENBTC |
 				TokenSymbol::BNC |
+				TokenSymbol::HKO |
 				TokenSymbol::VSKSM |
 				TokenSymbol::ACA |
 				TokenSymbol::CASH => Balance::max_value() // unsupported
