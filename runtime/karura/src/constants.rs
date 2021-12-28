@@ -98,6 +98,11 @@ pub mod parachains {
 		pub const VSKSM_KEY: &[u8] = &[4, 4];
 	}
 
+	pub mod heiko {
+		pub const ID: u32 = 2085;
+		pub const HKO_KEY: &[u8] = b"HKO";
+	}
+
 	pub mod phala {
 		pub const ID: u32 = 2004;
 	}
