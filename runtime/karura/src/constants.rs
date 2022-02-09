@@ -107,6 +107,11 @@ pub mod parachains {
 		pub const KBTC_KEY: &[u8] = &[0, 11];
 		pub const KINT_KEY: &[u8] = &[0, 12];
 	}
+
+	pub mod heiko {
+		pub const ID: u32 = 2085;
+		pub const HKO_KEY: &[u8] = b"HKO";
+	}
 }
 
 #[cfg(test)]

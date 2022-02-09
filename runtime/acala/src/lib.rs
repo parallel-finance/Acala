@@ -764,6 +764,7 @@ parameter_type_with_key! {
 				TokenSymbol::RENBTC |
 				TokenSymbol::BNC |
 				TokenSymbol::PHA |
+				TokenSymbol::HKO |
 				TokenSymbol::VSKSM |
 				TokenSymbol::ACA |
 				TokenSymbol::KBTC |

@@ -114,8 +114,8 @@ pub use runtime_common::{
 	HomaCouncilInstance, HomaCouncilMembershipInstance, MaxTipsOfPriority, OperationalFeeMultiplier,
 	OperatorMembershipInstanceAcala, Price, ProxyType, Rate, Ratio, RelayChainBlockNumberProvider,
 	RelayChainSubAccountId, RuntimeBlockLength, RuntimeBlockWeights, SystemContractsFilter, TechnicalCommitteeInstance,
-	TechnicalCommitteeMembershipInstance, TimeStampedPrice, TipPerWeightStep, BNC, KAR, KBTC, KINT, KSM, KUSD, LKSM,
-	PHA, RENBTC, VSKSM,
+	TechnicalCommitteeMembershipInstance, TimeStampedPrice, TipPerWeightStep, BNC, HKO, KAR, KBTC, KINT, KSM, KUSD,
+	LKSM, PHA, RENBTC, VSKSM,
 };
 
 mod authority;
@@ -764,6 +764,7 @@ parameter_type_with_key! {
 				TokenSymbol::KSM => 10 * millicent(*currency_id),
 				TokenSymbol::LKSM => 50 * millicent(*currency_id),
 				TokenSymbol::BNC => 800 * millicent(*currency_id),  // 80BNC = 1KSM
+				TokenSymbol::HKO => 300 * millicent(*currency_id),  // 30HKO = 1KSM
 				TokenSymbol::VSKSM => 10 * millicent(*currency_id),  // 1VSKSM = 1KSM
 				TokenSymbol::PHA => 4000 * millicent(*currency_id), // 400PHA = 1KSM
 				TokenSymbol::KINT => 13333 * microcent(*currency_id), // 1.33 KINT = 1 KSM
@@ -1571,6 +1572,14 @@ parameter_types! {
 		// BNC:KSM = 80:1
 		ksm_per_second() * 80
 	);
+	pub HKOPerSecond: (AssetId, u128) = (
+		MultiLocation::new(
+			1,
+			X2(Parachain(parachains::heiko::ID), GeneralKey(parachains::heiko::HKO_KEY.to_vec())),
+		).into(),
+		// HKO:KSM = 30:1
+		ksm_per_second() * 30
+	);
 	pub VsksmPerSecond: (AssetId, u128) = (
 		MultiLocation::new(
 			1,
@@ -1814,6 +1823,14 @@ impl Convert<CurrencyId, Option<MultiLocation>> for CurrencyIdConvert {
 					GeneralKey(parachains::kintsugi::KBTC_KEY.to_vec()),
 				),
 			)),
+			// Parallel Heiko native token
+			Token(HKO) => Some(MultiLocation::new(
+				1,
+				X2(
+					Parachain(parachains::heiko::ID),
+					GeneralKey(parachains::heiko::HKO_KEY.to_vec()),
+				),
+			)),
 			CurrencyId::ForeignAsset(foreign_asset_id) => AssetIdMaps::<Runtime>::get_multi_location(foreign_asset_id),
 			_ => None,
 		}
@@ -1843,6 +1860,7 @@ impl Convert<MultiLocation, Option<CurrencyId>> for CurrencyIdConvert {
 					(parachains::bifrost::ID, parachains::bifrost::VSKSM_KEY) => Some(Token(VSKSM)),
 					(parachains::kintsugi::ID, parachains::kintsugi::KINT_KEY) => Some(Token(KINT)),
 					(parachains::kintsugi::ID, parachains::kintsugi::KBTC_KEY) => Some(Token(KBTC)),
+					(parachains::heiko::ID, parachains::heiko::HKO_KEY) => Some(Token(HKO)),
 
 					(id, key) if id == u32::from(ParachainInfo::get()) => {
 						// Karura
