@@ -53,7 +53,7 @@ impl<T: frame_system::Config> module_asset_registry::WeightInfo for WeightInfo<T
 	// Storage: AssetRegistry ForeignAssetLocations (r:1 w:1)
 	// Storage: AssetRegistry AssetMetadatas (r:1 w:1)
 	fn register_foreign_asset() -> Weight {
-		(26_353_000 as Weight)
+		(26_876_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(5 as Weight))
 			.saturating_add(T::DbWeight::get().writes(5 as Weight))
 	}
@@ -61,7 +61,7 @@ impl<T: frame_system::Config> module_asset_registry::WeightInfo for WeightInfo<T
 	// Storage: AssetRegistry ForeignAssetLocations (r:1 w:1)
 	// Storage: AssetRegistry AssetMetadatas (r:1 w:1)
 	fn update_foreign_asset() -> Weight {
-		(23_374_000 as Weight)
+		(23_825_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
@@ -69,14 +69,14 @@ impl<T: frame_system::Config> module_asset_registry::WeightInfo for WeightInfo<T
 	// Storage: AssetRegistry NextStableAssetId (r:1 w:1)
 	// Storage: AssetRegistry AssetMetadatas (r:1 w:1)
 	fn register_stable_asset() -> Weight {
-		(19_501_000 as Weight)
+		(19_659_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: AssetRegistry AssetMetadatas (r:1 w:1)
 	fn update_stable_asset() -> Weight {
-		(19_009_000 as Weight)
+		(18_903_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
@@ -87,28 +87,28 @@ impl<T: frame_system::Config> module_asset_registry::WeightInfo for WeightInfo<T
 	// Storage: AssetRegistry AssetMetadatas (r:1 w:1)
 	// Storage: AssetRegistry Erc20IdToAddress (r:1 w:1)
 	fn register_erc20_asset() -> Weight {
-		(336_628_000 as Weight)
+		(336_564_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(11 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: AssetRegistry AssetMetadatas (r:1 w:1)
 	fn update_erc20_asset() -> Weight {
-		(26_818_000 as Weight)
+		(26_952_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: AssetRegistry AssetMetadatas (r:1 w:1)
 	fn register_native_asset() -> Weight {
-		(17_302_000 as Weight)
+		(17_104_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: AssetRegistry AssetMetadatas (r:1 w:1)
 	fn update_native_asset() -> Weight {
-		(18_191_000 as Weight)
+		(18_221_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}

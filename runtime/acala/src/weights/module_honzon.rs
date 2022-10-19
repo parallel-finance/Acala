@@ -51,7 +51,7 @@ impl<T: frame_system::Config> module_honzon::WeightInfo for WeightInfo<T> {
 	// Storage: Honzon Authorization (r:1 w:1)
 	// Storage: Balances Reserves (r:1 w:1)
 	fn authorize() -> Weight {
-		(33_859_000 as Weight)
+		(34_262_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
@@ -59,7 +59,7 @@ impl<T: frame_system::Config> module_honzon::WeightInfo for WeightInfo<T> {
 	// Storage: Honzon Authorization (r:1 w:1)
 	// Storage: Balances Reserves (r:1 w:1)
 	fn unauthorize() -> Weight {
-		(36_333_000 as Weight)
+		(35_821_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
@@ -67,9 +67,9 @@ impl<T: frame_system::Config> module_honzon::WeightInfo for WeightInfo<T> {
 	// Storage: Balances Reserves (r:1 w:0)
 	// Storage: Honzon Authorization (r:0 w:1)
 	fn unauthorize_all(c: u32, ) -> Weight {
-		(25_227_000 as Weight)
-			// Standard Error: 496_000
-			.saturating_add((5_691_000 as Weight).saturating_mul(c as Weight))
+		(26_473_000 as Weight)
+			// Standard Error: 518_000
+			.saturating_add((5_403_000 as Weight).saturating_mul(c as Weight))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes((1 as Weight).saturating_mul(c as Weight)))
@@ -89,7 +89,7 @@ impl<T: frame_system::Config> module_honzon::WeightInfo for WeightInfo<T> {
 	// Storage: AcalaOracle Values (r:1 w:0)
 	// Storage: AssetRegistry AssetMetadatas (r:2 w:0)
 	fn adjust_loan() -> Weight {
-		(122_185_000 as Weight)
+		(122_294_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(16 as Weight))
 			.saturating_add(T::DbWeight::get().writes(8 as Weight))
 	}
@@ -107,7 +107,7 @@ impl<T: frame_system::Config> module_honzon::WeightInfo for WeightInfo<T> {
 	// Storage: System Account (r:1 w:1)
 	// Storage: Loans TotalPositions (r:1 w:1)
 	fn transfer_loan_from() -> Weight {
-		(101_097_000 as Weight)
+		(101_203_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(17 as Weight))
 			.saturating_add(T::DbWeight::get().writes(8 as Weight))
 	}
@@ -136,7 +136,7 @@ impl<T: frame_system::Config> module_honzon::WeightInfo for WeightInfo<T> {
 	// Storage: Tokens TotalIssuance (r:2 w:1)
 	// Storage: Homa TotalVoidLiquid (r:1 w:0)
 	fn close_loan_has_debit_by_dex() -> Weight {
-		(562_020_000 as Weight)
+		(563_442_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(47 as Weight))
 			.saturating_add(T::DbWeight::get().writes(21 as Weight))
 	}
@@ -158,7 +158,7 @@ impl<T: frame_system::Config> module_honzon::WeightInfo for WeightInfo<T> {
 	// Storage: AcalaOracle Values (r:1 w:0)
 	// Storage: AssetRegistry AssetMetadatas (r:2 w:0)
 	fn expand_position_collateral() -> Weight {
-		(267_922_000 as Weight)
+		(266_529_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(32 as Weight))
 			.saturating_add(T::DbWeight::get().writes(13 as Weight))
 	}
@@ -181,7 +181,7 @@ impl<T: frame_system::Config> module_honzon::WeightInfo for WeightInfo<T> {
 	// Storage: Rewards PoolInfos (r:1 w:1)
 	// Storage: Loans TotalPositions (r:1 w:1)
 	fn shrink_position_debit() -> Weight {
-		(428_336_000 as Weight)
+		(425_351_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(39 as Weight))
 			.saturating_add(T::DbWeight::get().writes(19 as Weight))
 	}
@@ -199,7 +199,7 @@ impl<T: frame_system::Config> module_honzon::WeightInfo for WeightInfo<T> {
 	// Storage: Homa ToBondPool (r:1 w:0)
 	// Storage: Homa TotalVoidLiquid (r:1 w:0)
 	fn transfer_debit() -> Weight {
-		(158_486_000 as Weight)
+		(158_590_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(21 as Weight))
 			.saturating_add(T::DbWeight::get().writes(7 as Weight))
 	}
@@ -213,7 +213,7 @@ impl<T: frame_system::Config> module_honzon::WeightInfo for WeightInfo<T> {
 	// Storage: Homa TotalVoidLiquid (r:1 w:0)
 	// Storage: CdpEngine DebitExchangeRate (r:1 w:0)
 	fn precompile_get_current_collateral_ratio() -> Weight {
-		(38_053_000 as Weight)
+		(38_055_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(11 as Weight))
 	}
 }

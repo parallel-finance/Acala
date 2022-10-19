@@ -49,7 +49,7 @@ pub struct WeightInfo<T>(PhantomData<T>);
 impl<T: frame_system::Config> orml_authority::WeightInfo for WeightInfo<T> {
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	fn dispatch_as() -> Weight {
-		(13_021_000 as Weight)
+		(13_378_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
@@ -58,7 +58,7 @@ impl<T: frame_system::Config> orml_authority::WeightInfo for WeightInfo<T> {
 	// Storage: Scheduler Lookup (r:1 w:1)
 	// Storage: Scheduler Agenda (r:1 w:1)
 	fn schedule_dispatch_without_delay() -> Weight {
-		(27_933_000 as Weight)
+		(28_008_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
@@ -67,7 +67,7 @@ impl<T: frame_system::Config> orml_authority::WeightInfo for WeightInfo<T> {
 	// Storage: Scheduler Lookup (r:1 w:1)
 	// Storage: Scheduler Agenda (r:1 w:1)
 	fn schedule_dispatch_with_delay() -> Weight {
-		(28_505_000 as Weight)
+		(29_355_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
@@ -75,7 +75,7 @@ impl<T: frame_system::Config> orml_authority::WeightInfo for WeightInfo<T> {
 	// Storage: Scheduler Lookup (r:1 w:1)
 	// Storage: Scheduler Agenda (r:2 w:2)
 	fn fast_track_scheduled_dispatch() -> Weight {
-		(38_106_000 as Weight)
+		(37_151_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
@@ -83,7 +83,7 @@ impl<T: frame_system::Config> orml_authority::WeightInfo for WeightInfo<T> {
 	// Storage: Scheduler Lookup (r:1 w:1)
 	// Storage: Scheduler Agenda (r:2 w:2)
 	fn delay_scheduled_dispatch() -> Weight {
-		(37_178_000 as Weight)
+		(37_328_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
@@ -91,28 +91,28 @@ impl<T: frame_system::Config> orml_authority::WeightInfo for WeightInfo<T> {
 	// Storage: Scheduler Lookup (r:1 w:1)
 	// Storage: Scheduler Agenda (r:1 w:1)
 	fn cancel_scheduled_dispatch() -> Weight {
-		(27_780_000 as Weight)
+		(27_558_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: Authority SavedCalls (r:0 w:1)
 	fn authorize_call() -> Weight {
-		(13_844_000 as Weight)
+		(14_174_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: Authority SavedCalls (r:1 w:1)
 	fn remove_authorized_call() -> Weight {
-		(18_351_000 as Weight)
+		(17_650_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: Authority SavedCalls (r:1 w:1)
 	fn trigger_call() -> Weight {
-		(22_349_000 as Weight)
+		(22_356_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}

@@ -50,14 +50,14 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: Dex TradingPairStatuses (r:1 w:1)
 	fn enable_trading_pair() -> Weight {
-		(16_968_000 as Weight)
+		(17_159_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: Dex TradingPairStatuses (r:1 w:1)
 	fn disable_trading_pair() -> Weight {
-		(18_145_000 as Weight)
+		(18_206_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
@@ -66,14 +66,14 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: Tokens TotalIssuance (r:1 w:0)
 	// Storage: Dex ProvisioningPool (r:1 w:0)
 	fn list_provisioning() -> Weight {
-		(25_486_000 as Weight)
+		(24_784_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: Dex TradingPairStatuses (r:1 w:1)
 	fn update_provisioning_parameters() -> Weight {
-		(10_398_000 as Weight)
+		(10_438_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
@@ -85,7 +85,7 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: Dex LiquidityPool (r:1 w:1)
 	// Storage: Dex InitialShareExchangeRates (r:0 w:1)
 	fn end_provisioning() -> Weight {
-		(52_685_000 as Weight)
+		(52_185_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(6 as Weight))
 			.saturating_add(T::DbWeight::get().writes(7 as Weight))
 	}
@@ -95,7 +95,7 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: System Account (r:1 w:1)
 	// Storage: Tokens Accounts (r:2 w:2)
 	fn add_provision() -> Weight {
-		(84_138_000 as Weight)
+		(84_629_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(6 as Weight))
 			.saturating_add(T::DbWeight::get().writes(6 as Weight))
 	}
@@ -106,7 +106,7 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: Tokens Accounts (r:2 w:2)
 	// Storage: System Account (r:1 w:1)
 	fn claim_dex_share() -> Weight {
-		(74_596_000 as Weight)
+		(74_158_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(8 as Weight))
 			.saturating_add(T::DbWeight::get().writes(6 as Weight))
 	}
@@ -118,7 +118,7 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: Tokens Accounts (r:3 w:3)
 	// Storage: EvmAccounts EvmAddresses (r:1 w:0)
 	fn add_liquidity() -> Weight {
-		(104_991_000 as Weight)
+		(105_855_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(9 as Weight))
 			.saturating_add(T::DbWeight::get().writes(7 as Weight))
 	}
@@ -132,7 +132,7 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: Rewards PoolInfos (r:1 w:1)
 	// Storage: Rewards SharesAndWithdrawnRewards (r:1 w:1)
 	fn add_liquidity_and_stake() -> Weight {
-		(143_349_000 as Weight)
+		(144_966_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(12 as Weight))
 			.saturating_add(T::DbWeight::get().writes(10 as Weight))
 	}
@@ -142,7 +142,7 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: Tokens Accounts (r:3 w:3)
 	// Storage: System Account (r:1 w:1)
 	fn remove_liquidity() -> Weight {
-		(97_524_000 as Weight)
+		(98_477_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(7 as Weight))
 			.saturating_add(T::DbWeight::get().writes(7 as Weight))
 	}
@@ -155,7 +155,7 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: Rewards PoolInfos (r:1 w:1)
 	// Storage: EvmAccounts EvmAddresses (r:1 w:0)
 	fn remove_liquidity_by_unstake() -> Weight {
-		(153_728_000 as Weight)
+		(156_345_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(12 as Weight))
 			.saturating_add(T::DbWeight::get().writes(10 as Weight))
 	}
@@ -165,9 +165,9 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: System Account (r:1 w:1)
 	// Storage: Tokens Accounts (r:2 w:2)
 	fn swap_with_exact_supply(u: u32, ) -> Weight {
-		(57_462_000 as Weight)
-			// Standard Error: 164_000
-			.saturating_add((11_454_000 as Weight).saturating_mul(u as Weight))
+		(57_994_000 as Weight)
+			// Standard Error: 190_000
+			.saturating_add((11_330_000 as Weight).saturating_mul(u as Weight))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().reads((2 as Weight).saturating_mul(u as Weight)))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
@@ -179,9 +179,9 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: System Account (r:1 w:1)
 	// Storage: Tokens Accounts (r:2 w:2)
 	fn swap_with_exact_target(u: u32, ) -> Weight {
-		(57_728_000 as Weight)
-			// Standard Error: 302_000
-			.saturating_add((11_511_000 as Weight).saturating_mul(u as Weight))
+		(59_883_000 as Weight)
+			// Standard Error: 161_000
+			.saturating_add((10_800_000 as Weight).saturating_mul(u as Weight))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().reads((2 as Weight).saturating_mul(u as Weight)))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
@@ -195,14 +195,14 @@ impl<T: frame_system::Config> module_dex::WeightInfo for WeightInfo<T> {
 	// Storage: Tokens Accounts (r:2 w:2)
 	// Storage: EvmAccounts EvmAddresses (r:1 w:0)
 	fn refund_provision() -> Weight {
-		(84_171_000 as Weight)
+		(83_858_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(8 as Weight))
 			.saturating_add(T::DbWeight::get().writes(5 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: Dex TradingPairStatuses (r:1 w:1)
 	fn abort_provisioning() -> Weight {
-		(23_464_000 as Weight)
+		(23_603_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}

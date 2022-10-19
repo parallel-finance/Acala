@@ -51,7 +51,7 @@ impl<T: frame_system::Config> module_transaction_payment::WeightInfo for WeightI
 	// Storage: Balances Reserves (r:1 w:1)
 	// Storage: TransactionPayment AlternativeFeeSwapPath (r:0 w:1)
 	fn set_alternative_fee_swap_path() -> Weight {
-		(29_323_000 as Weight)
+		(29_268_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
@@ -66,7 +66,7 @@ impl<T: frame_system::Config> module_transaction_payment::WeightInfo for WeightI
 	// Storage: TransactionPayment TokenExchangeRate (r:0 w:1)
 	// Storage: TransactionPayment SwapBalanceThreshold (r:0 w:1)
 	fn enable_charge_fee_pool() -> Weight {
-		(107_489_000 as Weight)
+		(106_962_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(13 as Weight))
 			.saturating_add(T::DbWeight::get().writes(8 as Weight))
 	}
@@ -79,38 +79,38 @@ impl<T: frame_system::Config> module_transaction_payment::WeightInfo for WeightI
 	// Storage: TransactionPayment GlobalFeeSwapPath (r:0 w:1)
 	// Storage: TransactionPayment PoolSize (r:0 w:1)
 	fn disable_charge_fee_pool() -> Weight {
-		(78_974_000 as Weight)
+		(79_947_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(7 as Weight))
 			.saturating_add(T::DbWeight::get().writes(9 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	fn with_fee_path() -> Weight {
-		(6_466_000 as Weight)
+		(6_395_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	fn with_fee_currency() -> Weight {
-		(7_020_000 as Weight)
+		(6_758_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	fn with_fee_aggregated_path() -> Weight {
-		(7_460_000 as Weight)
+		(7_436_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	fn with_fee_paid_by() -> Weight {
-		(4_135_000 as Weight)
+		(4_263_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
 	// Storage: TransactionPayment NextFeeMultiplier (r:1 w:1)
 	// Storage: System BlockWeight (r:1 w:0)
 	fn on_finalize() -> Weight {
-		(7_682_000 as Weight)
+		(7_728_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}

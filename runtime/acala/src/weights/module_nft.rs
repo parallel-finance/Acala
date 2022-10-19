@@ -53,7 +53,7 @@ impl<T: frame_system::Config> module_nft::WeightInfo for WeightInfo<T> {
 	// Storage: Proxy Proxies (r:1 w:1)
 	// Storage: OrmlNFT Classes (r:0 w:1)
 	fn create_class() -> Weight {
-		(82_510_000 as Weight)
+		(82_428_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().writes(5 as Weight))
 	}
@@ -65,8 +65,8 @@ impl<T: frame_system::Config> module_nft::WeightInfo for WeightInfo<T> {
 	// Storage: OrmlNFT TokensByOwner (r:0 w:1)
 	fn mint(i: u32, ) -> Weight {
 		(0 as Weight)
-			// Standard Error: 19_000
-			.saturating_add((22_942_000 as Weight).saturating_mul(i as Weight))
+			// Standard Error: 37_000
+			.saturating_add((23_469_000 as Weight).saturating_mul(i as Weight))
 			.saturating_add(T::DbWeight::get().reads(5 as Weight))
 			.saturating_add(T::DbWeight::get().writes(5 as Weight))
 			.saturating_add(T::DbWeight::get().writes((2 as Weight).saturating_mul(i as Weight)))
@@ -78,7 +78,7 @@ impl<T: frame_system::Config> module_nft::WeightInfo for WeightInfo<T> {
 	// Storage: EvmAccounts EvmAddresses (r:1 w:0)
 	// Storage: OrmlNFT TokensByOwner (r:0 w:2)
 	fn transfer() -> Weight {
-		(108_973_000 as Weight)
+		(108_386_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(6 as Weight))
 			.saturating_add(T::DbWeight::get().writes(6 as Weight))
 	}
@@ -88,7 +88,7 @@ impl<T: frame_system::Config> module_nft::WeightInfo for WeightInfo<T> {
 	// Storage: System Account (r:1 w:1)
 	// Storage: OrmlNFT TokensByOwner (r:0 w:1)
 	fn burn() -> Weight {
-		(80_341_000 as Weight)
+		(80_195_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().writes(5 as Weight))
 	}
@@ -98,7 +98,7 @@ impl<T: frame_system::Config> module_nft::WeightInfo for WeightInfo<T> {
 	// Storage: System Account (r:1 w:1)
 	// Storage: OrmlNFT TokensByOwner (r:0 w:1)
 	fn burn_with_remark(b: u32, ) -> Weight {
-		(38_916_000 as Weight)
+		(0 as Weight)
 			// Standard Error: 0
 			.saturating_add((2_000 as Weight).saturating_mul(b as Weight))
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
@@ -111,13 +111,13 @@ impl<T: frame_system::Config> module_nft::WeightInfo for WeightInfo<T> {
 	// Storage: EvmAccounts EvmAddresses (r:1 w:0)
 	// Storage: OrmlNFT NextTokenId (r:0 w:1)
 	fn destroy_class() -> Weight {
-		(92_174_000 as Weight)
+		(92_434_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(5 as Weight))
 			.saturating_add(T::DbWeight::get().writes(5 as Weight))
 	}
 	// Storage: OrmlNFT Classes (r:1 w:1)
 	fn update_class_properties() -> Weight {
-		(19_826_000 as Weight)
+		(19_813_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}

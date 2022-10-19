@@ -52,7 +52,7 @@ impl<T: frame_system::Config> orml_tokens::WeightInfo for WeightInfo<T> {
 	// Storage: EvmAccounts EvmAddresses (r:1 w:0)
 	// Storage: System Account (r:1 w:1)
 	fn transfer() -> Weight {
-		(48_728_000 as Weight)
+		(48_273_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(5 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
@@ -61,7 +61,7 @@ impl<T: frame_system::Config> orml_tokens::WeightInfo for WeightInfo<T> {
 	// Storage: EvmAccounts EvmAddresses (r:1 w:0)
 	// Storage: System Account (r:1 w:1)
 	fn transfer_all() -> Weight {
-		(50_631_000 as Weight)
+		(51_050_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(5 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
@@ -69,7 +69,7 @@ impl<T: frame_system::Config> orml_tokens::WeightInfo for WeightInfo<T> {
 	// Storage: Tokens Accounts (r:2 w:2)
 	// Storage: System Account (r:1 w:1)
 	fn transfer_keep_alive() -> Weight {
-		(36_315_000 as Weight)
+		(36_220_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
@@ -77,7 +77,7 @@ impl<T: frame_system::Config> orml_tokens::WeightInfo for WeightInfo<T> {
 	// Storage: Tokens Accounts (r:2 w:2)
 	// Storage: System Account (r:2 w:1)
 	fn force_transfer() -> Weight {
-		(39_453_000 as Weight)
+		(39_405_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(5 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
@@ -86,7 +86,7 @@ impl<T: frame_system::Config> orml_tokens::WeightInfo for WeightInfo<T> {
 	// Storage: Tokens TotalIssuance (r:1 w:1)
 	// Storage: System Account (r:1 w:1)
 	fn set_balance() -> Weight {
-		(30_844_000 as Weight)
+		(30_618_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}

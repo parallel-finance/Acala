@@ -58,9 +58,9 @@ impl<T: frame_system::Config> module_cdp_treasury::WeightInfo for WeightInfo<T> 
 	// Storage: Auction AuctionEndTime (r:0 w:1)
 	// Storage: Auction Auctions (r:0 w:1)
 	fn auction_collateral(b: u32, ) -> Weight {
-		(42_294_000 as Weight)
-			// Standard Error: 19_000
-			.saturating_add((12_813_000 as Weight).saturating_mul(b as Weight))
+		(43_175_000 as Weight)
+			// Standard Error: 21_000
+			.saturating_add((12_872_000 as Weight).saturating_mul(b as Weight))
 			.saturating_add(T::DbWeight::get().reads(7 as Weight))
 			.saturating_add(T::DbWeight::get().writes(7 as Weight))
 			.saturating_add(T::DbWeight::get().writes((3 as Weight).saturating_mul(b as Weight)))
@@ -80,14 +80,14 @@ impl<T: frame_system::Config> module_cdp_treasury::WeightInfo for WeightInfo<T> 
 	// Storage: EvmAccounts EvmAddresses (r:1 w:0)
 	// Storage: AssetRegistry AssetMetadatas (r:1 w:0)
 	fn exchange_collateral_to_stable() -> Weight {
-		(373_558_000 as Weight)
+		(375_058_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(33 as Weight))
 			.saturating_add(T::DbWeight::get().writes(13 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: CdpTreasury ExpectedCollateralAuctionSize (r:0 w:1)
 	fn set_expected_collateral_auction_size() -> Weight {
-		(15_366_000 as Weight)
+		(15_491_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
@@ -95,7 +95,7 @@ impl<T: frame_system::Config> module_cdp_treasury::WeightInfo for WeightInfo<T> 
 	// Storage: Tokens Accounts (r:2 w:2)
 	// Storage: System Account (r:2 w:1)
 	fn extract_surplus_to_treasury() -> Weight {
-		(46_441_000 as Weight)
+		(46_343_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(5 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}

@@ -52,13 +52,13 @@ impl<T: frame_system::Config> module_session_manager::WeightInfo for WeightInfo<
 	// Storage: SessionManager DurationOffset (r:1 w:0)
 	// Storage: SessionManager SessionDurationChanges (r:0 w:1)
 	fn schedule_session_duration() -> Weight {
-		(17_147_000 as Weight)
+		(17_387_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
 	// Storage: SessionManager SessionDurationChanges (r:1 w:1)
 	fn on_initialize_skip() -> Weight {
-		(2_829_000 as Weight)
+		(2_901_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
@@ -66,20 +66,20 @@ impl<T: frame_system::Config> module_session_manager::WeightInfo for WeightInfo<
 	// Storage: SessionManager DurationOffset (r:0 w:1)
 	// Storage: SessionManager SessionDuration (r:0 w:1)
 	fn on_initialize() -> Weight {
-		(4_003_000 as Weight)
+		(4_137_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
 	// Storage: SessionManager DurationOffset (r:1 w:0)
 	// Storage: SessionManager SessionDuration (r:1 w:0)
 	fn estimate_current_session_progress() -> Weight {
-		(3_718_000 as Weight)
+		(3_762_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 	}
 	// Storage: SessionManager DurationOffset (r:1 w:0)
 	// Storage: SessionManager SessionDuration (r:1 w:0)
 	fn estimate_next_session_rotation() -> Weight {
-		(3_751_000 as Weight)
+		(3_749_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 	}
 }

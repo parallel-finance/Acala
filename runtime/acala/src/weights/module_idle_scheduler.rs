@@ -50,26 +50,26 @@ impl<T: frame_system::Config> module_idle_scheduler::WeightInfo for WeightInfo<T
 	// Storage: ParachainSystem ValidationData (r:1 w:0)
 	// Storage: IdleScheduler PreviousRelayBlockNumber (r:0 w:1)
 	fn on_initialize() -> Weight {
-		(2_591_000 as Weight)
+		(2_524_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
 	// Storage: ParachainSystem ValidationData (r:1 w:0)
 	// Storage: IdleScheduler PreviousRelayBlockNumber (r:1 w:0)
 	fn on_idle_base() -> Weight {
-		(3_784_000 as Weight)
+		(3_873_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 	}
 	// Storage: IdleScheduler Tasks (r:0 w:1)
 	fn clear_tasks() -> Weight {
-		(9_713_000 as Weight)
+		(9_819_000 as Weight)
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
 	// Storage: unknown [0x3a7472616e73616374696f6e5f6c6576656c3a] (r:1 w:1)
 	// Storage: IdleScheduler NextTaskId (r:1 w:1)
 	// Storage: IdleScheduler Tasks (r:0 w:1)
 	fn schedule_task() -> Weight {
-		(16_393_000 as Weight)
+		(16_186_000 as Weight)
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
